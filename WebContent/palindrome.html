@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Palindrome</title>
+<script>
+function checkPalindrom(str) {
+	var stra = str.split('').reverse().join('');
+	if(str == stra){
+		document.getElementById('resultDiv').innerHTML = "Yes it is a Plaindrome";
+	}else{
+		document.getElementById('resultDiv').innerHTML = "No it is not a Plaindrome";
+	};
+}
+</script>
+</head>
+<body>
+<form>
+<input type="text" id="formValueId" name="valueId"/>
+<input type="button" onclick="checkPalindrom(this.form.valueId.value)" value="submit"/>
+</form>
+<br />
+<div id="resultDiv">text will go here</div>
+</body>
+</html>
