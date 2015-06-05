@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas HTML Example</title>
+<script>
+window.onload = draw;
+function draw(){
+	var element = document.getElementById('canvas1');
+	var context = element.getContext('2d');
+	context.fillStyle="#FF0000";
+	context.fillRect(10,10,100,100);
+}
+
+
+</script>
+</head>
+<body>
+<canvas id="canvas1" width="400" height="300"></canvas>
+</body>
+</html>
