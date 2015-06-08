@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Placing an Element At the Center</title>
+<style>
+#div1{
+border: 1px solid red;
+top:50%;
+left:50%;
+display:inline-block;
+position:fixed;
+/* -webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%); */
+}
+</style>
+</head>
+<body>
+<div id="div1"> Hello this is me, Paridhi Dixit !</div>
+
+<script> 
+var looper;
+var degree = 0; 
+
+function rotateAnimation(element, speed){
+var elem = document.getElementById(element);
+elem.style.WebkitTransform = "rotate("+degree+"deg)";
+elem.style.transform = "rotate("+degree+"deg)";
+//looper = setTimeout('rotateAnimation(\''+element+'\','+speed+')',speed);
+degree++;
+if(degree > 359){degree=1;}
+
+}
+</script>
+<script>
+setInterval(function(){
+for(i=0;i<360;i++){
+	rotateAnimation("div1", i);
+	}
+},100);
+
+/* rotateAnimation("div1", 20); */
+
+</script>
+</body>
+</html>
